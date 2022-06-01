@@ -1,0 +1,20 @@
+name: Scala Steward
+
+on:
+  schedule:
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
+
+jobs:
+  scala-steward:
+    runs-on: ubuntu-latest
+    name: Scala Steward
+    steps:
+      # Need to checkout the repo for reading repos.md
+      - uses: actions/checkout@v2
+      - name: Launch Scala Steward
+        uses: scala-steward-org/scala-steward-action@v2
+        with:
+          github-token: ${{ secrets.REPO_GITHUB_TOKEN }}
+          author-email: 'leo+bot@xerial.org'
+          repos-file: 'repos.md'
