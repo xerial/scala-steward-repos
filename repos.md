@@ -4,3 +4,5 @@
 - wvlet/wvlet
 - xerial/sbt-sonatype
 - xerial/sbt-pack
+- xerial/sbt-sql
+- xerial/snappy-java
