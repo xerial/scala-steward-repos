@@ -11,7 +11,7 @@ jobs:
     name: Scala Steward
     steps:
       # Need to checkout the repo for reading repos.md
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Launch Scala Steward
         uses: scala-steward-org/scala-steward-action@v2
         with:
