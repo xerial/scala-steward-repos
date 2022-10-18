@@ -18,3 +18,4 @@ jobs:
           github-token: ${{ secrets.REPO_GITHUB_TOKEN }}
           author-email: 'leo+bot@xerial.org'
           repos-file: 'repos.md'
+          other-args: '--add-labels'
