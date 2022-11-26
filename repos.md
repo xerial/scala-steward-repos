@@ -6,4 +6,3 @@
 - xerial/sbt-sonatype
 - xerial/sbt-sql
 - xerial/snappy-java
-- xerial/larray
