@@ -2,7 +2,5 @@
 - wvlet/airframe
 - wvlet/querybase
 - wvlet/wvlet
-- xerial/sbt-pack
-- xerial/sbt-sonatype
 - xerial/sbt-sql
 - xerial/snappy-java
