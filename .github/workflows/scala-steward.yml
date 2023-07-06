@@ -12,6 +12,18 @@ jobs:
     steps:
       # Need to checkout the repo for reading repos.md
       - uses: actions/checkout@v3
+      - name: Cache artifacts
+        id: cache-artifacts
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.ivy2/local
+            ~/.sbt
+            ~/.cache
+          key: ${{ runner.os }}-artifacts
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
       - name: Launch Scala Steward
         uses: scala-steward-org/scala-steward-action@v2
         with:
