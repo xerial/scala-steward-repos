@@ -9,6 +9,8 @@ jobs:
   scala-steward:
     runs-on: ubuntu-latest
     name: Scala Steward
+    env:
+      SBT_OPTS: -Xmx2G
     steps:
       # Need to checkout the repo for reading repos.md
       - uses: actions/checkout@v4
