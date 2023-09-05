@@ -11,7 +11,7 @@ jobs:
     name: Scala Steward
     steps:
       # Need to checkout the repo for reading repos.md
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Cache artifacts
         id: cache-artifacts
         uses: actions/cache@v3
