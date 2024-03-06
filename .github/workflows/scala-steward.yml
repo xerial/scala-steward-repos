@@ -36,7 +36,7 @@ jobs:
         with:
           github-token: ${{ secrets.REPO_GITHUB_TOKEN }}
           author-email: 'leo+bot@xerial.org'
-          scala-steward-version: '0.29.1'
+          # scala-steward-version: '0.29.1'
           repos-file: 'repos.md'
           other-args: '--add-labels'
           max-buffer-size: 1048576
