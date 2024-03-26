@@ -22,7 +22,7 @@ jobs:
             ~/.ivy2/local
             ~/.sbt
             ~/.cache
-          key: ${{ runner.os }}-artifacts
+          key: ${{ runner.os }}-sc-artifacts
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
@@ -36,7 +36,7 @@ jobs:
         with:
           github-token: ${{ secrets.REPO_GITHUB_TOKEN }}
           author-email: 'leo+bot@xerial.org'
-          #scala-steward-version: '0.29.1'
+          # scala-steward-version: ''
           repos-file: 'repos.md'
           other-args: '--add-labels'
           max-buffer-size: 1048576
