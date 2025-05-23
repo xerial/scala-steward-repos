@@ -40,7 +40,4 @@ jobs:
           repos-file: 'repos.md'
           other-args: '--add-labels'
           max-buffer-size: 1048576
-      # Create a dummy commit every 50 days to keep alive this action
-      # GitHub suspends action after 60 days of no activity
-      - name: Keep Alive GitHub Action
-        uses: gautamkrishnar/keepalive-workflow@v2
+
