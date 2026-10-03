@@ -9,6 +9,9 @@ jobs:
   scala-steward:
     runs-on: ubuntu-latest
     name: Scala Steward
+    permissions:
+      contents: read
+      actions: write
     env:
       SBT_OPTS: -Xmx2G
     steps:
@@ -40,4 +43,10 @@ jobs:
           repos-file: 'repos.md'
           other-args: '--add-labels'
           max-buffer-size: 1048576
-
+      # GitHub disables scheduled workflows after 60 days without repository activity.
+      # Re-enabling this workflow via the API on each run resets that timer.
+      - name: Keep workflow alive
+        if: always() && github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow enable scala-steward.yml -R ${{ github.repository }}
