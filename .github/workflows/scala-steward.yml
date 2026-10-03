@@ -16,7 +16,7 @@ jobs:
       SBT_OPTS: -Xmx2G
     steps:
       # Need to checkout the repo for reading repos.md
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - name: Cache artifacts
         id: cache-artifacts
         uses: actions/cache@v4
